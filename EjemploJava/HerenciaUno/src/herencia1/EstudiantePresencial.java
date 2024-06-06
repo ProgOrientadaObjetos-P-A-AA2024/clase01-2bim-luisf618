@@ -11,7 +11,7 @@ public class EstudiantePresencial extends Estudiante{
     private double matriculaPresencial;
     
     //  Métodos establecer y calcular para los datos o atributos de la clase
-    // 2.  Método establecerNumeroCreditos(numero: Real)
+    // 2.  Método establecerNumeroCreditos(numero: Entero)
     public void establecerNumeroCreditos(int numero){
         numeroCreditos = numero;
     }
@@ -44,7 +44,11 @@ public class EstudiantePresencial extends Estudiante{
     
     @Override
     public String toString(){
-        return nombresEstudiante;
+        String cadena = String.format("Nombre: %s\nCosto Matricula: %.2f", 
+                nombresEstudiante, matriculaPresencial);
+        // Se pueden ocupar los atributos de la super clase, como si fueran de
+        // la propia clase, ya que estos los hereda
+        return cadena;
     }
     
 }
